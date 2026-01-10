@@ -1,43 +1,28 @@
-import { StyleSheet, Text, View } from '@react-pdf/renderer';
+import { Text, View } from '@react-pdf/renderer';
 
 const Section = ({ title, styles: passedStyles, children }) => {
-    // Default styles if none passed (for backwards compatibility)
-    const defaultStyles = StyleSheet.create({
-        section_title: {
-            textTransform: 'uppercase',
-            color: '#333',
-            fontSize: 13,
-        },
+    // Use section title style from passed styles (compact spacing)
+    const sectionTitleStyle = passedStyles?.section_title || {
+        fontSize: 10,
+        fontFamily: 'Helvetica-Bold',
+        textTransform: 'uppercase',
+        marginBottom: 2,
+        borderBottomWidth: 0.75,
+        borderBottomColor: '#000',
+        paddingBottom: 1,
+    };
 
-        section_title_underline: {
-            height: 1,
-            margin: '2px 0px 4px 0px',
-            backgroundColor: '#888',
-        },
-        section_end: {
-            height: 2,
-            margin: '10px 0px',
-            backgroundColor: '#eee',
-        },
-    });
-
-    // Use passed styles or create a dynamic version based on them
-    const sectionTitle = passedStyles?.section_title || defaultStyles.section_title;
-    const sectionTitleUnderline = passedStyles?.section_title_underline || defaultStyles.section_title_underline;
-    const sectionEnd = passedStyles?.section_end || defaultStyles.section_end;
+    const sectionEndStyle = passedStyles?.section_end || {
+        marginBottom: 4,
+    };
 
     return (
-        <View>
+        <View style={passedStyles?.section}>
             {title && (
-                <>
-                    <Text style={sectionTitle}>{title}</Text>
-                    <View style={sectionTitleUnderline}></View>
-                </>
+                <Text style={sectionTitleStyle}>{title}</Text>
             )}
-
             {children}
-
-            <View style={sectionEnd}></View>
+            <View style={sectionEndStyle} />
         </View>
     );
 };

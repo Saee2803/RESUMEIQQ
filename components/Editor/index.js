@@ -2,6 +2,7 @@
 
 import ResumeFields from '@/config/ResumeFields';
 import { saveResume } from '@/store/slices/resumeSlice';
+import { redirect } from 'next/navigation';
 import { useCallback, useEffect, useState } from 'react';
 import { CgSpinner } from 'react-icons/cg';
 import { FaSave } from 'react-icons/fa';
@@ -10,6 +11,11 @@ import MultiEditor from './MultiEditor';
 import SingleEditor from './SingleEditor';
 
 const Editor = ({ tab, onSave, saveState }) => {
+    // Redirect to contact if tab doesn't exist
+    if (!ResumeFields[tab]) {
+        redirect('/editor?tab=contact');
+    }
+    
     const { multiple } = ResumeFields[tab];
     const dispatch = useDispatch();
     const [localSaving, setLocalSaving] = useState(false);

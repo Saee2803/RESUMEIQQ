@@ -1,24 +1,38 @@
-import { Text, View, StyleSheet } from '@react-pdf/renderer';
+/**
+ * ListItem Component for HTML Resume Preview
+ * Compact bullet point styling
+ */
+const ListItem = ({ children, styles }) => {
+    const defaultStyles = {
+        listItem: {
+            display: 'flex',
+            flexDirection: 'row',
+            marginBottom: '1px',
+            paddingRight: '4px',
+        },
+        bullet: {
+            width: '8px',
+            fontSize: '9pt',
+            flexShrink: 0,
+        },
+        listText: {
+            flex: 1,
+            fontSize: '9pt',
+            lineHeight: '1.25',
+            margin: 0,
+        },
+    };
 
-const ListItem = ({ children }) => {
+    const itemStyle = styles?.listItem || defaultStyles.listItem;
+    const bulletStyle = styles?.bullet || defaultStyles.bullet;
+    const textStyle = styles?.listText || defaultStyles.listText;
+
     return (
-        <div style={styles.row}>
-            <div style={styles.bullet}>
-                <p>{'\u2022' + ' '}</p>
-            </div>
-            <p>{children}</p>
+        <div style={itemStyle}>
+            <span style={bulletStyle}>•</span>
+            <span style={textStyle}>{children}</span>
         </div>
     );
 };
-
-const styles = StyleSheet.create({
-    row: {
-        display: 'flex',
-        flexDirection: 'row',
-    },
-    bullet: {
-        height: '100%',
-    },
-});
 
 export default ListItem;
