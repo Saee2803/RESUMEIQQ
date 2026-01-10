@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== Color System ========== */
+:root {
+    --bg-primary: #0b1220;
+    --bg-secondary: #111827;
+    --bg-tertiary: #1f2937;
+    --border-color: #1f2933;
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --accent-primary: #3b82f6;
+    --accent-success: #22c55e;
+    --accent-warning: #f59e0b;
+}
+
+@layer base {
+    body {
+        @apply bg-[#0b1220] text-[#f3f4f6] caret-[#3b82f6];
+        font-family: 'Ubuntu', sans-serif;
+        color-scheme: dark;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-[#f3f4f6];
+    }
+}
+
+@layer components {
+    /* ========== Button Styles ========== */
+    .btn {
+        @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-[#1f2933] bg-[#1f2937] px-4 py-2 font-medium text-[#d1d5db] transition-all duration-200 hover:bg-[#374151] hover:border-[#374151] active:scale-95 2xl:text-base;
+
+        &:disabled {
+            @apply cursor-not-allowed opacity-50 hover:bg-[#1f2937] active:scale-100;
+        }
+
+        &-filled {
+            @apply bg-[#3b82f6] border-[#3b82f6] text-white hover:bg-[#2563eb] hover:border-[#2563eb] shadow-lg shadow-[#3b82f6]/20;
+
+            &:disabled {
+                @apply hover:bg-[#3b82f6];
+            }
+        }
+
+        &-success {
+            @apply bg-[#22c55e] border-[#22c55e] text-white hover:bg-[#16a34a] hover:border-[#16a34a] shadow-lg shadow-[#22c55e]/20;
+        }
+
+        &-danger {
+            @apply bg-[#ef4444] border-[#ef4444] text-white hover:bg-[#dc2626] hover:border-[#dc2626] shadow-lg shadow-[#ef4444]/20;
+        }
+
+        &-sm {
+            @apply px-3 py-1.5 text-sm;
+        }
+
+        &-lg {
+            @apply px-6 py-3 text-lg;
+        }
+    }
+
+    /* ========== Card Styles ========== */
+    .card {
+        @apply rounded-xl border border-[#1f2933] bg-[#111827] p-4 shadow-2xl shadow-black/20 transition-all duration-200 md:p-6 2xl:p-8;
+
+        &:hover {
+            @apply border-[#374151] shadow-2xl shadow-black/40;
+        }
+
+        &-lg {
+            @extend .card;
+            @apply p-6 md:p-8 2xl:p-10;
+        }
+
+        &-sm {
+            @extend .card;
+            @apply p-3 md:p-4;
+        }
+    }
+
+    /* ========== Input Styles ========== */
+    input, textarea, select {
+        @apply rounded-lg border border-[#1f2933] bg-[#1f2937] text-[#f3f4f6] px-3 py-2 transition-all duration-200 focus:border-[#3b82f6] focus:outline-none focus:ring-2 focus:ring-[#3b82f6]/20;
+
+        &::placeholder {
+            @apply text-[#6b7280];
+        }
+    }
+}
+
+@layer utilities {
+    /* ========== Gradient Utilities ========== */
+    .gradient {
+        @apply bg-gradient-to-r from-[#3b82f6] via-[#8b5cf6] to-[#22c55e];
+    }
+
+    .text-gradient {
+        @extend .gradient;
+        @apply bg-clip-text text-transparent;
+    }
+
+    /* ========== Spacing Utilities ========== */
+    .section-divider {
+        @apply border-b border-[#1f2933];
+    }
+
+    /* ========== Visibility ========== */
+    .sticky-header {
+        @apply sticky top-0 z-10 bg-[#0b1220]/95 backdrop-blur-sm border-b border-[#1f2933];
+    }
+}
+
+/* ========== Animation Keyframes ========== */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float-delayed {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+    }
+}
+
+.animate-slide-in {
+    animation: slide-in 0.3s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float-delayed 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.tabs {
+    &::after {
+        content: '';
+        @apply absolute bottom-0 left-0 h-2 w-full;
+    }
+}
+
+::-webkit-scrollbar {
+    @apply md:size-1.5;
+
+    &-track {
+        @apply bg-gray-700;
+    }
+
+    &-thumb {
+        @apply bg-primary-500 rounded-sm;
+
+        &:hover {
+            @apply bg-primary-500;
+        }
+    }
+}
+
+/* ========== React-PDF Preview Styles ========== */
+/* Ensures crisp, sharp rendering without blur */
+.react-pdf__Document {
+    display: flex;
+    justify-content: center;
+}
+
+.react-pdf__Page {
+    /* Remove any default shadows that might cause blur perception */
+    box-shadow: none !important;
+    
+    /* Ensure proper rendering */
+    canvas {
+        /* Disable image smoothing for crisp text */
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        
+        /* Ensure no transform blur */
+        transform: none !important;
+        
+        /* White background for the page */
+        background: white;
+    }
+}
+
+/* Text layer styling for selectable text */
+.react-pdf__Page__textContent {
+    /* Make text selectable but invisible */
+    color: transparent;
+    
+    span {
+        color: transparent;
+    }
+}
+
+/* Annotation layer for clickable links */
+.react-pdf__Page__annotations {
+    a {
+        cursor: pointer;
+    }
+}
