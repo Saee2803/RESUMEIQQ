@@ -1,75 +1,85 @@
-RESUMEIQQ – AI Resume Analyzer & Job Match Platform
+# 🚀 RESUMEIQQ – AI Resume Analyzer & Job Match Platform
 
-Smart AI-powered Resume Analysis & ATS Optimization System for Students and Job Seekers
+<p align="center">
+  <strong>Smart AI-powered Resume Analysis & ATS Optimization System</strong><br>
+  Helping students, freshers, and professionals build job-ready resumes.
+</p>
 
-🚀 Overview
+<p align="center">
+  <a href="https://resumeiqq.vercel.app/"><strong>🌐 Live Demo</strong></a> •
+  <a href="https://github.com/Saee2803/RESUMEIQQ"><strong>📦 GitHub Repo</strong></a>
+</p>
 
-RESUMEIQQ is an intelligent web platform that helps users improve their resumes, analyze ATS compatibility, identify missing skills, and match resumes with job descriptions.
+---
 
-The system provides:
+## 📌 Overview
 
-📄 Resume parsing & analysis
-🎯 ATS score evaluation
-💼 Job description matching
-🧠 Skill gap detection
-✨ Resume improvement suggestions
-📊 Resume strength analytics
+**RESUMEIQQ** is an intelligent web platform that helps users improve resumes, analyze ATS compatibility, identify missing skills, and match resumes with job descriptions.
 
-Built for students, freshers, and professionals who want to improve their chances of getting shortlisted.
+The platform provides AI-driven resume insights and optimization suggestions to increase the chances of getting shortlisted by recruiters and ATS systems.
 
-✨ Features
-📄 Resume Upload & Parsing
-Upload resumes in PDF/DOC format
-Extract skills, education, and experience
-Structured resume analysis
+---
 
-🎯 ATS Score Checker
-Analyze resume for ATS friendliness
-Keyword optimization suggestions
-Formatting recommendations
+## ✨ Features
 
-💼 Job Description Matching
-Compare resume with job descriptions
-Match percentage calculation
-Missing keyword identification
+### 📄 Resume Upload & Parsing
+- Upload resumes in PDF/DOC format
+- Extract skills, education, and experience
+- Structured resume analysis
 
-🧠 Skill Gap Analysis
-Detect missing technical skills
-Suggest important tools & technologies
-Personalized improvement recommendations
+### 🎯 ATS Score Checker
+- Analyze resume ATS friendliness
+- Keyword optimization suggestions
+- Resume formatting recommendations
 
-📊 Analytics Dashboard
-Resume score visualization
-Skills overview
-Improvement tracking
+### 💼 Job Description Matching
+- Compare resume with job descriptions
+- Match percentage calculation
+- Missing keyword detection
 
-⚡ Modern Responsive UI
-Mobile-friendly design
-Interactive dashboards
-Clean and professional interface
+### 🧠 Skill Gap Analysis
+- Detect missing technical skills
+- Suggest important tools & technologies
+- Personalized improvement recommendations
 
-🛠️ Tech Stack
-Technology	Purpose
-React.js / Next.js	Frontend UI
-Tailwind CSS	Styling
-Node.js / Flask	Backend
-Python	Resume Processing
-NLP	Skill Extraction
-MongoDB / Supabase	Database
-Vercel	Deployment
+### 📊 Analytics Dashboard
+- Resume score visualization
+- Skills overview
+- Improvement tracking
 
-📁 Project Structure
+### ⚡ Modern Responsive UI
+- Mobile-friendly design
+- Interactive dashboards
+- Clean and professional interface
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| React.js / Next.js | Frontend UI |
+| Tailwind CSS | Styling |
+| Node.js / Flask | Backend |
+| Python | Resume Processing |
+| NLP | Skill Extraction |
+| MongoDB / Supabase | Database |
+| Vercel | Deployment |
+
+---
+
+## 📁 Project Structure
+
+```bash
 RESUMEIQQ/
 │
-├── frontend/             # Frontend Application
-├── backend/              # Backend APIs
-├── public/               # Static Assets
-├── components/           # Reusable Components
-├── pages/                # Application Pages
-├── utils/                # Utility Functions
-├── services/             # API Services
-├── styles/               # CSS & Tailwind Files
-├── package.json
+├── frontend/          # Frontend Application
+├── backend/           # Backend APIs
+├── components/        # Reusable Components
+├── pages/             # Application Pages
+├── services/          # API Services
+├── utils/             # Utility Functions
+├── public/            # Static Assets
 └── README.md
 
 🚀 Getting Started
@@ -78,42 +88,38 @@ git clone https://github.com/Saee2803/RESUMEIQQ.git
 cd RESUMEIQQ
 2️⃣ Install Dependencies
 npm install
-3️⃣ Start Development Server
+3️⃣ Run Development Server
 npm run dev
+🌐 Live Demo
 
-
-🌐 **Live Demo:** [https://resumeiqq.vercel.app/](https://resumeiqq.vercel.app/)
+🔗 https://resumeiqq.vercel.app/
 
 📊 How It Works
-User uploads resume
+Upload your resume
 System extracts resume content
-ATS & skill analysis performed
-Resume compared with job description
-Suggestions & score generated instantly
-
+ATS & skill analysis is performed
+Resume is matched with job description
+Improvement suggestions & score are generated instantly
 🎯 Use Cases
 Students preparing for placements
 Freshers applying for jobs
 Resume optimization for ATS systems
 Skill improvement guidance
 Portfolio enhancement
-
 🔒 Security Features
 Secure file upload handling
 Resume data privacy
 Protected API endpoints
 Safe cloud deployment
-
 🚀 Future Enhancements
-AI interview preparation
-Resume builder
-LinkedIn profile analyzer
-AI career roadmap
-Multi-language support
-
+AI Interview Preparation
+Resume Builder
+LinkedIn Profile Analyzer
+AI Career Roadmap
+Multi-language Support
 🤝 Contributing
 Fork the repository
-Create feature branch
+Create a feature branch
 Commit changes
 Push to branch
 Create Pull Request
@@ -123,6 +129,6 @@ This project is licensed under the MIT License.
 
 👩‍💻 Developer
 
-Developed by Saee Chandrakant Bhanuskar
+Saee Chandrakant Bhanuskar
 
 ⭐ If you like this project, give it a star on GitHub!
