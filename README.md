@@ -82,17 +82,22 @@ RESUMEIQQ/
 ├── public/            # Static Assets
 └── README.md
 
-🚀 Getting Started
-1️⃣ Clone Repository
+## 🚀 Getting Started
+
+### 1️⃣ Clone Repository
+
+```bash
 git clone https://github.com/Saee2803/RESUMEIQQ.git
 cd RESUMEIQQ
+
 2️⃣ Install Dependencies
 npm install
+
 3️⃣ Run Development Server
 npm run dev
-🌐 Live Demo
 
-🔗 https://resumeiqq.vercel.app/
+🌐 Live Demo
+https://resumeiqq.vercel.app/
 
 📊 How It Works
 Upload your resume
@@ -100,23 +105,27 @@ System extracts resume content
 ATS & skill analysis is performed
 Resume is matched with job description
 Improvement suggestions & score are generated instantly
+
 🎯 Use Cases
 Students preparing for placements
 Freshers applying for jobs
 Resume optimization for ATS systems
 Skill improvement guidance
 Portfolio enhancement
+
 🔒 Security Features
 Secure file upload handling
 Resume data privacy
 Protected API endpoints
 Safe cloud deployment
+
 🚀 Future Enhancements
 AI Interview Preparation
 Resume Builder
 LinkedIn Profile Analyzer
 AI Career Roadmap
 Multi-language Support
+
 🤝 Contributing
 Fork the repository
 Create a feature branch
